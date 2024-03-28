@@ -25,4 +25,4 @@ console.log(typeof "Saumya");
 
 console.log(typeof null);         // null is an object (which sometimes is considered as a mistake of the language)
 
-console.log(typeof undefined);
+console.log(typeof undefined);    //output : undefined 
