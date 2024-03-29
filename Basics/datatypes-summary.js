@@ -40,10 +40,34 @@ const myFunction = function(){       // function
 
 
 //saare non primitive ka datatype function hi aata h bss function ka object function
-console.log(typeof heroes);
-console.log(typeof myObj);
-console.log(typeof myFunction);
-
+// console.log(typeof heroes);
+// console.log(typeof myObj);
+// console.log(typeof myFunction);
 
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+//************************************************************************** */
+
+//Stack(primitive)  --->  declared variable ki ek copy milti h aur usi m saare changes perform hota h(original m nhi)
+//heap (Non-primitive)  ---> declared ka reference milta h aur changes direct original value m hoti h
+
+let myName = "Saumya"
+
+let anothername = myName
+anothername = "sasa"
+
+console.log(myName);    //Since it is created into a stack, the changes are made into the copy so the value in myName remains unchanged
+console.log(anothername);
+
+let user1 = {
+    email: "user@google.com",
+    upi : "user@ybl"
+}
+
+let user2 = user1
+
+user2.email = "saumya@google.com"
+
+console.log(user1.email);   //both will print same value i.e. "saumya@google.com" as the object gets memory in the heap and both point at same reference 
+console.log(user2.email);
